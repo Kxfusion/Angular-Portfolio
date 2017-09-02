@@ -1,0 +1,25 @@
+  <h2>My Projects</h2>
+	
+	<div>
+		<label>Project name:</label> <input #projectName />
+		<button (click)="add(projectName.value); projectName.value=''">
+		  Add
+		</button>
+	</div>
+	
+	<div class="PList">
+		<ngb-accordion #acc="ngbAccordion">
+			<ngb-panel class="Proj" *ngFor="let Project of projects">
+				<ng-template ngbPanelTitle>
+					<span class="badge">{{Project.id}}</span> {{Project.name}}
+					<button class="delete"
+						(click)="delete(Project); 
+						$event.stopImmediatePropagation()">x</button>
+				</ng-template> 
+				
+				<ng-template ngbPanelContent>
+					<button [routerLink]="['/detail', Project.id]">View Details</button>
+				</ng-template>
+			</ngb-panel>
+		</ngb-accordion>
+	</div>

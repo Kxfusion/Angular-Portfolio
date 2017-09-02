@@ -1,0 +1,10 @@
+<h3>Main Projects</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let Project of projects" [routerLink]="['/detail', Project.id]" class="col-1-4">
+    <div class="module project">
+      <h4>{{Project.name}}</h4>
+    </div>
+  </a>
+</div>
+<div id="divide"></div>
+<project-search></project-search>
