@@ -1,75 +1,57 @@
 /* Master Styles */
-h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
-}
-
-h2, h3 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-}
-
 body {
-  margin: 2em;
+	height: 100vh;
+	background-color: #3F363F;
 }
 
-body, input[text], button {
-  color: #888;
-  font-family: Cambria, Georgia;
-}
-
-a {
+a, button{
   cursor: pointer;
   cursor: hand;
 }
 
-button {
-  font-family: Arial;
-  background-color: #eee;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  cursor: hand;
+div[role=tab] {
+	background-color: rgba(197, 117, 234, 0.5);
+	background: radial-gradient(
+		circle at 10% 50%,
+		#000000 10%,
+		#8c40bf 95%,
+		#542673 5%
+	);
+	border-width: 1px;
+	border-color: rgb(0, 0, 0);
+	cursor: pointer;
+	padding: 0px;
 }
 
-button:hover {
-  background-color: #cfd8dc;
+.card {
+	border-color: rgb(0, 0, 0) !important;
+	border-radius: 5px 0px 0px 0px;
 }
 
-button:disabled {
-  background-color: #eee;
-  color: #aaa;
-  cursor: auto;
+.card:hover {	
+	transform: translate(2px);
 }
 
-/* Navigation link styles */
-nav a {
-  padding: 5px 10px;
-  text-decoration: none;
-  margin-right: 10px;
-  margin-top: 10px;
-  display: inline-block;
-  background-color: #eee;
-  border-radius: 4px;
+div[role=tab]:hover {
+	background-color: rgba(197, 117, 234, 0.6);
+	background: radial-gradient(
+		circle at 10% 50%,
+		#000000 1%,
+		#8c40bf 95%,
+		#542673 5%
+	);
 }
 
-nav a:visited, a:link {
-  color: #607D8B;
+div[role=tab].active {
+	background-color: rgba(197, 117, 234, 0.7);
+	background: radial-gradient(
+		circle at 10% 50%,
+		#000000 10%,
+		#8c40bf 90%,
+		#542673 10%
+	);
 }
 
-nav a:hover {
-  color: #039be5;
-  background-color: #CFD8DC;
-}
-
-nav a.active {
-  color: #039be5;
-}
-
-/* everywhere else */
-* {
-  font-family: Arial, Helvetica, sans-serif;
+div[role=tabpanel] {
+	background-color: #542673;
 }

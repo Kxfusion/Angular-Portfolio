@@ -1,81 +1,96 @@
-button.delete {
+.projectsBody {
+	height: 100%;
+}
+
+.title {
+	text-align: center;
+	color: #0000ff;
+	border-radius: 10px 10px 0px 0px;
+	padding-bottom: 5px;
+	background: linear-gradient(177deg, #000000 55%, #8c40bf);
+}
+
+.title h3 {
+	font: lighter 2.5em 'Play', sans-serif;
+	margin: 0px;
+}
+
+h4 {
+	color: #3051D3;
+	text-align: center;
+	font: lightest 2em 'Play', sans-serif;
+}
+
+.name a {
+	text-decoration: none;
+	color: #0000ff;
+}
+
+.name {
+	font-family: 'Play', sans-serif;
+}
+
+.pList {
+	display: inline-block;
+	padding: 0px 0px 0px 5px;
+	width: 60%;
+}
+
+.selectableTab {
+	padding: .75rem 1.25rem; 
+}
+
+.detail {
+	border-color: #1C082A;
+	border-radius: 10px;
+	background-color: #1C082A;
+	color: #ffffff;
+}
+
+.detail:hover {
+	background-color: #541A7E;
+}
+
+.pictureReel {
+	border-radius: 10px;
+	box-shadow: inset .01em .01em .01em .01em #000000;
 	float: right;
-	margin-top: 2px;
-	margin-right: .8em;
-	background-color: gray !important;
-	color: white;
+	width: 39.95%;
+	background: #393139;
+	height: 90vh; 
 }
 
-.PList {
-	padding-top: 20px;
-	width: 50%;
-	margin: auto;
+.Pic {
+	width: 45%;
+	margin: 2%;
 }
 
-.Proj {
-	width: 50%;
-	max-width: 800px;
-	display: flex;
-}
-
-@media (max-width: 800px){
-	.PList {
-		width: 75%;
+@media screen and (max-width: 500px){
+	.pList {
+		width: 100%;
+		padding: 0px;
 	}
-}
-
-@media (max-width: 400px){
-	.PList {
+	
+	.pictureReel {
 		width: 100%;
 	}
+	
+	.Pic {
+		width: 45%;
+	}
 }
 
-/*.selected{
-  background-color: #CFD8DC !important;
-  color: white;
+@media screen and (min-width: 501px) and (max-width: 700px){
+	.pList {
+		width: 80%;
+	}
+	
+	.pictureReel{
+		width: 19.9%;
+	}
+	
+	.Pic {
+		width: 100%;
+		height: 22%;
+	}
 }
-
-.Proj{
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  width:  15em;
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: 0;
-  height: 1.6em;
-  border-radius: 4px;
-}
-
-.Proj div.selected:hover{
-  background-color: #BBD8DC;
-  color: white;
-}
-
-.Proj div:hover{
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
-}
-
-.Proj .text{
-  position: relative;
-  top: -3px;
-}
-
-.Proj .badge{
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #607D8B;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
-}*/

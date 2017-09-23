@@ -1,25 +1,28 @@
-  <h2>My Projects</h2>
-	
-	<div>
-		<label>Project name:</label> <input #projectName />
-		<button (click)="add(projectName.value); projectName.value=''">
-		  Add
-		</button>
-	</div>
-	
-	<div class="PList">
-		<ngb-accordion #acc="ngbAccordion">
-			<ngb-panel class="Proj" *ngFor="let Project of projects">
+<div class="projectsBody">
+  <div class="pList">
+	  <div class="title"><h3>Full Project List</h3></div>
+		<ngb-accordion #acc="ngbAccordion" [closeOthers]="true">
+			<ngb-panel *ngFor="let Project of projects">
 				<ng-template ngbPanelTitle>
-					<span class="badge">{{Project.id}}</span> {{Project.name}}
-					<button class="delete"
-						(click)="delete(Project); 
-						$event.stopImmediatePropagation()">x</button>
+					<div class="selectableTab" (click)="selectProj(Project.id)">
+					  <span class="name">{{Project.name}}</span>
+					</div>
 				</ng-template> 
 				
 				<ng-template ngbPanelContent>
-					<button [routerLink]="['/detail', Project.id]">View Details</button>
+					<button [routerLink]="['/detail', Project.id]" class="detail">
+					  View Details
+					</button>
 				</ng-template>
 			</ngb-panel>
 		</ngb-accordion>
 	</div>
+	
+	<div class="pictureReel">
+		<h4> Project Images </h4>
+		<img class="Pic" [src]="Pather1" />
+		<img class="Pic" [src]="Pather2" />
+		<img class="Pic" [src]="Pather3" />
+		<img class="Pic" [src]="Pather4" />
+	</div>
+</div>
