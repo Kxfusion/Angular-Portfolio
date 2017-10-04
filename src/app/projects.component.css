@@ -65,10 +65,11 @@ h4 {
 	margin: 2%;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
 	.pList {
 		width: 100%;
 		padding: 0px;
+		margin-top: 15px;
 	}
 	
 	.pictureReel {
@@ -80,7 +81,7 @@ h4 {
 	}
 }
 
-@media screen and (min-width: 501px) and (max-width: 700px){
+@media screen and (min-width: 601px) and (max-width: 800px){
 	.pList {
 		width: 80%;
 	}

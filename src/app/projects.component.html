@@ -4,7 +4,7 @@
 		<ngb-accordion #acc="ngbAccordion" [closeOthers]="true">
 			<ngb-panel *ngFor="let Project of projects">
 				<ng-template ngbPanelTitle>
-					<div class="selectableTab" (click)="selectProj(Project.id)">
+					<div class="selectableTab" (mouseenter)="selectProj(Project.id)">
 					  <span class="name">{{Project.name}}</span>
 					</div>
 				</ng-template> 
@@ -20,9 +20,9 @@
 	
 	<div class="pictureReel">
 		<h4> Project Images </h4>
-		<img class="Pic" [src]="Pather1" />
-		<img class="Pic" [src]="Pather2" />
-		<img class="Pic" [src]="Pather3" />
-		<img class="Pic" [src]="Pather4" />
+		<img [@projSelected]="ImgState" class="Pic" [src]="Pather1" />
+		<img [@projSelected]="ImgState" class="Pic" [src]="Pather2" />
+		<img [@projSelected]="ImgState" class="Pic" [src]="Pather3" />
+		<img [@projSelected]="ImgState" class="Pic" [src]="Pather4" />
 	</div>
 </div>
